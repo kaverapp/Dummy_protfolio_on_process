@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kaverappa's portfolio - Web Developer and Designer specializing in MERN stack">
+    <title>Kaverappa's Portfolio</title>
+    <link rel="stylesheet" href="skyl.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    :root {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff;
+    --nav-bg-color: #2a2a2a;
+    --nav-text-color: #ffffff;
+    --accent-color: #23d5ab;
+    --about-bg-color: #2a2a2a;
+}
+
+.dark-theme {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --nav-bg-color: #1f1f1f;
+    --nav-text-color: #e0e0e0;
+    --accent-color: #23d5ab;
+    --about-bg-color: #1f1f1f;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--nav-bg-color);
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: var(--nav-bg-color);
+}
+
+.nav-item {
+    color: var(--nav-text-color);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover, .nav-item:focus {
+    color: var(--accent-color);
+    outline: none;
+}
+
+main {
+    padding-top: 80px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.tagline {
+    width: 50%;
+}
+
+.tagline h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.tagline p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.about, .works, .skills, .contact {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about {
+    background-color: var(--about-bg-color);
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-list li {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--accent-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--nav-text-color);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.theme-toggle:hover {
+    background-color: var(--accent-color);
+    color: var(--nav-bg-color);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--nav-bg-color);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tagline {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-item {
+        margin: 5px 10px;
+    }
+}
+</style>
+<body>
+    <button class="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-adjust"></i>
+    </button>
+
+    <header class="header">
+        <nav class="nav" aria-label="Main navigation">
+            <a href="#home" class="nav-item">Home</a>
+            <a href="#about" class="nav-item">About</a>
+            <a href="#works" class="nav-item">Works</a>
+            <a href="#skills" class="nav-item">Skills</a>
+            <a href="#contact" class="nav-item">Contact</a>
+            <a href="#blog" class="nav-item">Blog</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="container">
+            <div class="hero">
+                <div class="tagline">
+                    <h1>Hi, I'm Kaverappa</h1>
+                    <p>A Web Developer and Designer</p>
+                    <p>"I specialize in creating intuitive and dynamic web applications using the MERN stack. Passionate about solving complex problems and delivering elegant solutions."</p>
+                    <p>"Building Responsive Web Experiences with Precision and Creativity."</p>
+                </div>                
+                <img src="" alt="Kaverappa's profile picture" class="profile-img" loading="lazy">
+            </div>
+        </section>
+        
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>
+                As a web developer and designer, I bring ideas to life through code and creativity. 
+                With expertise in the MERN stack (MongoDB, Express.js, React, Node.js), I craft 
+                seamless, user-friendly web applications that not only look great but also perform 
+                excellently. My passion lies in solving complex problems and turning them into 
+                simple, beautiful solutions.
+            </p>
+        </section>
+
+        <section id="works" class="works">
+            <h2>My Works</h2>
+            <div class="project-grid">
+                <!-- Add project cards here -->
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul class="skill-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+                <li>Express.js</li>
+                <li>Responsive Design</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kaverappa. All rights reserved.</p>
+    </footer>
+
+    <audio id="ease-sound" src="downfall-3-208028.mp3" preload="auto"></audio>
+
+    <script src="https://kit.fontawesome.com/94b0009461.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>   enhance it
